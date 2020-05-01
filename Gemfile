@@ -37,6 +37,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'shopify_app'
+gem 'activeresource', github: 'rails/activeresource' #shopify_app is compatible with Rails 5 but since the latest ActiveResource release (4.1) is locked on Rails 4.x, you’ll need to use the unreleased master version
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
