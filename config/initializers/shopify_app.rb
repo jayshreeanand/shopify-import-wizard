@@ -8,5 +8,5 @@ ShopifyApp.configure do |config|
   config.embedded_app = true
   config.after_authenticate_job = false
   config.api_version = ""
-  config.session_repository = Shop
+  config.session_repository = ShopifyApp::InMemorySessionStore
 end
