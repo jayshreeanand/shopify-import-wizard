@@ -70,8 +70,8 @@
           </div>
 
           <div class="mb-4">
-            <label for="address">Message</label>
-            <textarea rows="3" class="form-control" id="address" required>This website uses cookies to ensure you get the best experience on our website.
+            <label for="bar-message">Message</label>
+            <textarea rows="3" class="form-control" id="bar-message" required>This website uses cookies to ensure you get the best experience on our website.
             </textarea>
             <div class="invalid-feedback">
               Please enter a message.
@@ -79,24 +79,24 @@
           </div>
 
           <div class="mb-4">
-            <label for="privay-ur">Privacy Policy URL</label>
-            <input type="text" class="form-control" id="privacy-url" required value="https://geeky-design.myshopify.com/policies/privacy-policy">
+            <label for="bar-privacy-link">Privacy Policy URL</label>
+            <input type="text" class="form-control" id="bar-privacy-link" required value="https://geeky-design.myshopify.com/policies/privacy-policy">
             <div class="invalid-feedback">
               Please enter your privacy policy URL
             </div>
           </div>
 
           <div class="mb-4">
-            <label for="ok-button-text">OK Button Text</label>
-            <input type="text" class="form-control" id="ok-button-text" required value="Got it!">
+            <label for="bar-button-text">OK Button Text</label>
+            <input type="text" class="form-control" id="bar-button-text" required value="Got it!">
             <div class="invalid-feedback">
               Please enter OK button text
             </div>
           </div>
 
           <div class="mb-4">
-            <label for="info-link-text">Info Link Text</label>
-            <input type="text" class="form-control" id="info-link-text" required value="Learn More">
+            <label for="bar-privacy-link-text">Info Link Text</label>
+            <input type="text" class="form-control" id="bar-privacy-link-text" required value="Learn More">
             <div class="invalid-feedback">
               Please enter info link text
             </div>
@@ -208,28 +208,28 @@
         <ul class="list-group mb-3">
           <li class="list-group-item d-flex justify-content-between lh-condensed">
             <h6 class="my-0">Banner</h6>
-            <input class="color-picker" value='#000000' />
+            <input class="color-picker" id="color-banner" value='#000000' />
           </li>
           <li class="list-group-item d-flex justify-content-between lh-condensed">
             <h6 class="my-0">Banner Text</h6>
-            <input class="color-picker" value='#ffffff' />
+            <input class="color-picker" id="color-banner-text" value='#ffffff' />
           </li>
           <li class="list-group-item d-flex justify-content-between lh-condensed">
             <h6 class="my-0">Banner Link</h6>
-            <input class="color-picker" value='#ffffff' />
+            <input class="color-picker" id="color-banner-link" value='#ffffff' />
           </li>
           <li class="list-group-item d-flex justify-content-between lh-condensed">
             <h6 class="my-0">Button</h6>
-            <input class="color-picker" value='#000000' />
+            <input class="color-picker" id="color-button" value='#000000' />
 
           </li>
           <li class="list-group-item d-flex justify-content-between lh-condensed">
             <h6 class="my-0">Button Text</h6>
-            <input class="color-picker" value='#4FC3F7' />
+            <input class="color-picker" id="color-button-text" value='#4FC3F7' />
           </li>
           <li class="list-group-item d-flex justify-content-between lh-condensed">
             <h6 class="my-0">Button Border</h6>
-            <input class="color-picker" value='#4FC3F7' />
+            <input class="color-picker" id="color-button-border" value='#4FC3F7' />
           </li>
           <!-- <li class="list-group-item d-flex justify-content-between bg-light">
             <div class="text-success">
@@ -271,7 +271,7 @@
    </div> -->
 
 
-    <footer class="my-5 pt-5 text-muted text-center text-small">
+    <footer class="my-5 pt-5 text-muted text-center text-small">  
       <p class="mb-1">&copy; 2017-2019 Company Name</p>
       <ul class="list-inline">
         <li class="list-inline-item"><a href="#">Privacy</a></li>
@@ -280,15 +280,15 @@
       </ul>
     </footer>
   </div>
-  <div class="preview-cookie-bar">
-    <div class="cookie-bar-content">
+  <div class="preview-cookie-bar-holder">
+    <div class="preview-cookie-bar">
       <div class="container">
         <div class="row">
-          <div class="col-md-10 text-light">
-            <div class="bar-message">This website uses cookies to ensure you get the best experience on our website.</div>
+          <div class="col-md-10">
+            <div class="preview-bar-message"><span>This website uses cookies to ensure you get the best experience on our website.&nbsp;</span><a href="#" class="preview-privacy-link">Learn More</a></div>
           </div>
           <div class="col-md-2">
-            <button class="btn btn-outline-primary btn-block bar-button" type="submit">Got it!</button>
+            <button class="btn btn-outline-primary btn-block preview-bar-button" type="submit">Got it!</button>
           </div>
         </div>
       </div>

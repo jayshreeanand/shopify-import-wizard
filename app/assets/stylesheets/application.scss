@@ -34,7 +34,7 @@ body {
   margin-bottom: 140px; /* Margin bottom by footer height */
 }
 
-.preview-cookie-bar {
+.preview-cookie-bar-holder {
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -44,7 +44,8 @@ body {
   // border: 30px solid transparent;
   background-image: url('bg_transparent.png');
 
-  .cookie-bar-content {
+  .preview-cookie-bar {
+    color: white;
     background-color: black;
     height: 80px;
     line-height: 80px;
@@ -52,7 +53,7 @@ body {
 
   }
 
-  .bar-button {
+  .preview-bar-button {
     margin-top: 20px;
   }
 
