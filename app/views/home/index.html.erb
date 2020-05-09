@@ -7,12 +7,6 @@
 <% end %>
 <h2>Products</h2>
 
-<ul>
-  <% @products.each do |product| %>
-    <li><%= link_to product.title, "https://#{@shop_session.domain}/admin/products/#{product.id}", target: "_top" %></li>
-  <% end %>
-</ul>
-
 <hr>
 
 <h2>Webhooks</h2>
@@ -26,6 +20,10 @@
 <% else %>
   <p>This app has not created any webhooks for this Shop. Add webhooks to your ShopifyApp initializer if you need webhooks</p>
 <% end %>
+
+<h2><%= "Hey there #{@shop} 👋 😊" %></h2>
+<p>Welcome to another top rated FREE app by Prototype Labs! 🚀</p>
+
 
 <div class="bg-light">
 <div class="container">
