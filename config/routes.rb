@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   mount ShopifyApp::Engine, at: '/'
 
   get 'test', to: 'pages#index'
+  get 'cookie_bar', to: 'pages#cookie_bar'
 
   namespace :app_proxy do
     root action: 'index'
