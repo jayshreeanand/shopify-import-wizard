@@ -4,5 +4,5 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require_tree .
-
+//= require spectrum.min
+//= require color_picker
