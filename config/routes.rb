@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get 'test', to: 'pages#index'
   get 'cookie_bar', to: 'pages#cookie_bar'
+  get 'create_script_tag', to: 'home#create_script_tag' #TODO: use POST
 
   namespace :app_proxy do
     root action: 'index'

@@ -7,4 +7,12 @@ class HomeController < AuthenticatedController
     @webhooks = ShopifyAPI::Webhook.find(:all)
     @shop = ShopifyAPI::Shop.current.name
   end
+
+  def create_script_tag
+    ShopifyAPI::ScriptTag.create({ src: "#{ENV["REMOTE_HOST"]}/cookie_bar.js", event: 'onload'})
+    redirect_to root_path
+  end
+
+  def delete_script_tag
+  end
 end
