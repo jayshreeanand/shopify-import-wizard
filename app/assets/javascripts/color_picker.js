@@ -7,8 +7,7 @@ $('.colorpicker').spectrum({
 
 $(".color-picker").spectrum({
   type: "color",
-  showPaletteOnly: "true",
+  hideAfterPaletteSelect: "true",
   showInput: "true",
-  showInitial: "true",
-  showPalette: true
+  showInitial: "true"
 });
