@@ -43,6 +43,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 
 # APIs
 gem 'google-api-client', '~> 0.34'
+gem 'remove_bg'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
