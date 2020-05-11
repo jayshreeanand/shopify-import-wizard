@@ -4,12 +4,13 @@ Rails.application.routes.draw do
 
   get 'wizard', to: 'pages#index'
   get 'cookie', to: 'pages#cookie'
-  get 'image_tools', to: 'pages#image_tools'
+  get 'image_tools', to: 'home#image_tools'
   get 'content_tools', to: 'pages#content_tools'
   get 'cookie_bar', to: 'pages#cookie_bar'
   get 'create_script_tag', to: 'home#create_script_tag' #TODO: use POST
   get 'create_sample_product', to: 'home#create_sample_product'
   post 'import_books', to: 'home#import_books'
+  post 'process_images', to: 'home#process_images'
 
   namespace :app_proxy do
     root action: 'index'

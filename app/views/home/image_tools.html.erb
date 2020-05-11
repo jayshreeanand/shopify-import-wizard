@@ -6,12 +6,54 @@
       <div class="col-md-6 order-md-1 mb-4">
         <h4 class="mb-3">Image Tools</h4>
         <p class="text-muted pb-5">Remove Background, edit and optimize images. Generate product tags, categories and description from the Images</p>
-          <form method="post" action="#" id="#">
+         <form class="needs-validation" novalidate action="process_images" data-remote="true" method="post">
+            <ul class="list-group mb-3">
+              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <p class="my-0">Select image background color preference</p>
+                <input class="color-picker" id="color-banner" value='#caffff' />
+              </li>
+            </ul>
             <div class="form-group files drag-drop">
-              <label>Upload Your File </label>
+              <label>Upload Your Files</label>
               <input type="file" class="form-control" multiple="">
             </div>
-          </form>
-        </div>
+            <div class="mb-4">
+            <label for="image-urls">or paste image urls here</label>
+            <textarea rows="5" class="form-control" id="image-urls" name="image-urls"placeholder="Copy paste the product content here ( 1 per line )"></textarea>
+            <div class="invalid-feedback">
+              Please enter a message.
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit">Process Images</button>
+        </form>
       </div>
+      <%- if @processed_images.present? %>
+
+         <div class="col-md-6 order-md-2">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+              <span>Processed Images</span>
+            </h4>
+            <p class="text-muted">You can edit the info below</p>
+
+
+          <table class="table processed-images">
+      <thead>
+        <tr>
+          <th scope="col">Original</th>
+          <th scope="col">Processed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%- @processed_images.each do |i, processed_image| %>
+          <tr>
+            <td><%= image_tag(processed_image[0]) %></td>
+            <td><%= image_tag(processed_image[1]) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
     </div>
+
+  <%- end %>
+
+      </div>

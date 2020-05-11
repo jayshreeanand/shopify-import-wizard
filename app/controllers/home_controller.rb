@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 # class HomeController < ApplicationController
 require './lib/book_fetcher.rb'
+require './lib/image_background_remover.rb'
 
-class HomeController < AuthenticatedController
+class HomeController < AuthenticationController
   layout 'pages' 
   def index
     # @products = ShopifyAPI::Product.find(:all, params: { limit: 10 })
@@ -16,6 +17,7 @@ class HomeController < AuthenticatedController
   end
 
   def image_tools
+    @processed_images = params[:processed_images] || nil
   end
 
   def content_tools
@@ -56,6 +58,18 @@ class HomeController < AuthenticatedController
     redirect_to root_path
   end
 
+  def process_images
+    query = params['image-urls']
+    image_urls = query.split("\n")
+    output = {}
+    image_urls.each_with_index do |image_url, i|
+      # ImageBackgroundRemover.process(image_url, "output_#{i}")
+      output[i] = [image_url, "output_#{i}.png"]
+    end
+    p "-----output is---#{output}"
+    redirect_to action: 'image_tools', processed_images: output
+
+  end
 
   def import_books
     query = params['product-data'] # TODO action params
