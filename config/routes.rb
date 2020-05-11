@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'cookie_bar', to: 'pages#cookie_bar'
   get 'create_script_tag', to: 'home#create_script_tag' #TODO: use POST
   get 'create_sample_product', to: 'home#create_sample_product'
+  post 'import_books', to: 'home#import_books'
 
   namespace :app_proxy do
     root action: 'index'

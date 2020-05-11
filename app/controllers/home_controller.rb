@@ -1,11 +1,14 @@
 # frozen_string_literal: true
+class HomeController < ApplicationController
 
-class HomeController < AuthenticatedController
+# class HomeController < AuthenticatedController
   layout 'pages' 
   def index
     # @products = ShopifyAPI::Product.find(:all, params: { limit: 10 })
     # @webhooks = ShopifyAPI::Webhook.find(:all)
     # @shop = ShopifyAPI::Shop.current.name
+
+    @products = params[:products]
   end
 
   def cookie
@@ -50,5 +53,15 @@ class HomeController < AuthenticatedController
 
     p result 
     redirect_to root_path
+  end
+
+
+  def import_books
+    query = params['product-data'] # TODO action params
+
+    books = BookFetcher.book_info(query)
+
+    redirect_to action: :index, products: books
+
   end
 end

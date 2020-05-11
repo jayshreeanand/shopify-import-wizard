@@ -3,53 +3,10 @@
         <h4 class="mb-3">Import Wizard</h4>
         <p class="text-muted">Import products into store using images, text or CSV</p>
 
-        <form class="needs-validation" novalidate>
-         <!--  <div class="row">
-            <div class="col-md-6 mb-3">
-              <label for="firstName">First name</label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-              <div class="invalid-feedback">
-                Valid first name is required.
-              </div>
-            </div>
-            <div class="col-md-6 mb-3">
-              <label for="lastName">Last name</label>
-              <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-              <div class="invalid-feedback">
-                Valid last name is required.
-              </div>
-            </div>
-          </div> -->
-
-          <!-- <div class="mb-3">
-            <label for="username">Username</label>
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text">@</span>
-              </div>
-              <input type="text" class="form-control" id="username" placeholder="Username" required>
-              <div class="invalid-feedback" style="width: 100%;">
-                Your username is required.
-              </div>
-            </div>
-          </div> -->
-
-        <!--   <div class="mb-3">
-            <label for="email">Email <span class="text-muted">(Optional)</span></label>
-            <input type="email" class="form-control" id="email" placeholder="you@example.com">
-            <div class="invalid-feedback">
-              Please enter a valid email address for shipping updates.
-            </div>
-          </div> -->
-
-   <!--        <div class="custom-control custom-checkbox mb-4">
-            <input type="checkbox" class="custom-control-input" id="banner-enabled" checked>
-            <label class="custom-control-label" for="banner-enabled">Banner enabled on your store</label>
-          </div> -->
-
+        <form class="needs-validation" novalidate action="import_books" data-remote="true" method="post">
           <div class="mb-4">
-            <label for="bar-message">Content</label>
-            <textarea rows="10" class="form-control" id="bar-message" placeholder="Copy paste the product content here ( 1 per line )"></textarea>
+            <label for="product-data">Content</label>
+            <textarea rows="10" class="form-control" id="product-data" name="product-data"placeholder="Copy paste the product content here ( 1 per line )"></textarea>
             <div class="invalid-feedback">
               Please enter a message.
             </div>
@@ -73,115 +30,57 @@
               </select>
             </div>
           </div>
-        <!-- 
-          <div class="mb-4">
-            <label for="bar-privacy-link-text">Info Link Text</label>
-            <input type="text" class="form-control" id="bar-privacy-link-text" required value="Learn More">
-            <div class="invalid-feedback">
-              Please enter info link text
-            </div>
-          </div>
- -->
-          <!-- <div class="row">
-            <div class="col-md-5 mb-3">
-              <label for="country">Country</label>
-              <select class="custom-select d-block w-100" id="country" required>
-                <option value="">Choose...</option>
-                <option>United States</option>
-              </select>
-              <div class="invalid-feedback">
-                Please select a valid country.
-              </div>
-            </div>
-            <div class="col-md-4 mb-3">
-              <label for="state">State</label>
-              <select class="custom-select d-block w-100" id="state" required>
-                <option value="">Choose...</option>
-                <option>California</option>
-              </select>
-              <div class="invalid-feedback">
-                Please provide a valid state.
-              </div>
-            </div>
-            <div class="col-md-3 mb-3">
-              <label for="zip">Zip</label>
-              <input type="text" class="form-control" id="zip" placeholder="" required>
-              <div class="invalid-feedback">
-                Zip code required.
-              </div>
-            </div>
-          </div> -->
-          <!-- <hr class="mb-4"> -->
+
           <hr class="mt-4">
 
           <div class="custom-control custom-checkbox mb-5">
             <input type="checkbox" class="custom-control-input" id="eu-countries">
             <label class="custom-control-label" for="eu-countries">Import images</label>
           </div>
-         <!--  <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="save-info">
-            <label class="custom-control-label" for="save-info">Save this information for next time</label>
-          </div> -->
-
-         <!--  <h4 class="mb-3">Payment</h4>
-
-          <div class="d-block my-3">
-            <div class="custom-control custom-radio">
-              <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-              <label class="custom-control-label" for="credit">Credit card</label>
-            </div>
-            <div class="custom-control custom-radio">
-              <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-              <label class="custom-control-label" for="debit">Debit card</label>
-            </div>
-            <div class="custom-control custom-radio">
-              <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-              <label class="custom-control-label" for="paypal">PayPal</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <label for="cc-name">Name on card</label>
-              <input type="text" class="form-control" id="cc-name" placeholder="" required>
-              <small class="text-muted">Full name as displayed on card</small>
-              <div class="invalid-feedback">
-                Name on card is required
-              </div>
-            </div>
-            <div class="col-md-6 mb-3">
-              <label for="cc-number">Credit card number</label>
-              <input type="text" class="form-control" id="cc-number" placeholder="" required>
-              <div class="invalid-feedback">
-                Credit card number is required
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-3 mb-3">
-              <label for="cc-expiration">Expiration</label>
-              <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-              <div class="invalid-feedback">
-                Expiration date required
-              </div>
-            </div>
-            <div class="col-md-3 mb-3">
-              <label for="cc-cvv">CVV</label>
-              <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-              <div class="invalid-feedback">
-                Security code required
-              </div>
-            </div>
-          </div> -->
-          <!-- <hr class="mb-4"> -->
-
-       
+        
 
           <button class="btn btn-primary btn-block" type="submit">Launch Import Wizard</button>
-          <!-- <div class="btn btn-outline-primary btn-block">
-            <%= link_to 'Preview the cookie bar on your store and come back 👍', create_sample_product_path, class: "btn" %>
+          <!-- <div class="btn btn-primary btn-block">
+            <%= link_to 'Launch Import Wizard', create_sample_product_path, class: "btn" %>
           </div> -->
         </form>
       </div>
+
+
+    <%- if @products.present? %>
+
+         <div class="col-md-6 order-md-2">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+              <span>Imported products</span>
+            </h4>
+            <p class="text-muted">You can edit the info below</p>
+
+
+          <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Image</th>
+          <th scope="col">Title</th>
+          <th scope="col">Description</th>
+          <th scope="col">Author</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%- @products.each_with_index do |product, i| %>
+          <tr class="overflow-auto product-row">
+            <th scope="row"><%= "#{i+1}" %></th>
+            <td><%= image_tag("#{product[:image]}") %></td>
+            <td><%= product[:title] %></td>
+            <td><%= product[:description].truncate(150) %></td>
+            <td><%= product[:authors].present? ? product[:authors].join(', ') : '' %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    </div>
+
+  <%- end %>
       <!-- <div class="col-md-4 order-md-2">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
           <span>Design Settings</span>
@@ -215,7 +114,7 @@
             <input class="color-picker" id="color-button-border" value='#4FC3F7' />
           </li>
         </ul>
-      </div> -->
+      </div>
     </div>
       
 
