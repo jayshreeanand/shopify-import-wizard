@@ -2,7 +2,10 @@ Rails.application.routes.draw do
   root :to => 'home#index'
   mount ShopifyApp::Engine, at: '/'
 
-  get 'test', to: 'pages#index'
+  get 'wizard', to: 'pages#index'
+  get 'cookie', to: 'pages#cookie'
+  get 'image_tools', to: 'pages#image_tools'
+  get 'content_tools', to: 'pages#content_tools'
   get 'cookie_bar', to: 'pages#cookie_bar'
   get 'create_script_tag', to: 'home#create_script_tag' #TODO: use POST
   get 'create_sample_product', to: 'home#create_sample_product'

@@ -4,8 +4,20 @@ class HomeController < AuthenticatedController
   layout 'pages' 
   def index
     # @products = ShopifyAPI::Product.find(:all, params: { limit: 10 })
-    @webhooks = ShopifyAPI::Webhook.find(:all)
-    @shop = ShopifyAPI::Shop.current.name
+    # @webhooks = ShopifyAPI::Webhook.find(:all)
+    # @shop = ShopifyAPI::Shop.current.name
+  end
+
+  def cookie
+  end
+
+  def image_tools
+  end
+
+  def content_tools
+  end
+
+  def wizard
   end
 
   def create_script_tag
