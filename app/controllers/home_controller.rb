@@ -3,7 +3,7 @@
 require './lib/book_fetcher.rb'
 require './lib/image_background_remover.rb'
 
-class HomeController < AuthenticationController
+class HomeController < AuthenticatedController
   layout 'pages' 
   def index
     # @products = ShopifyAPI::Product.find(:all, params: { limit: 10 })
