@@ -1,21 +1,7 @@
-
-
-  <!-- <div class="alert alert-success my-5" role="alert">
-    <p class="alert-heading">Click the stars to tell us how you’re feeling about the app so far 😊👉</p>
-  </div> -->
-
- <!--  <h3 class="py-4"><%= "Hey there #{@shop} 👋" %></h3>
-  <p>Welcome to Launch wizard by Prototype Labs! 🚀</p> -->
-    <div class="py-5 text-center">
-      <!-- <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/docs/4.4/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
-      <h2>EU Cookie Bar</h2>
-      <p class="lead">Settings to enable cookie consent bar on your store.</p>
-    </div>
-    
-    <div class="row">
+    <div class="row py-5">
       <div class="col-md-6 order-md-1 mb-4">
-        <h4 class="mb-3">Banner Settings</h4>
-        <p class="text-muted">Make the banner seamlessly suit your store</p>
+        <h4 class="mb-3">Import Wizard</h4>
+        <p class="text-muted">Import products into store using images, text or CSV</p>
 
         <form class="needs-validation" novalidate>
          <!--  <div class="row">
@@ -56,36 +42,38 @@
             </div>
           </div> -->
 
-          <div class="custom-control custom-checkbox mb-4">
+   <!--        <div class="custom-control custom-checkbox mb-4">
             <input type="checkbox" class="custom-control-input" id="banner-enabled" checked>
             <label class="custom-control-label" for="banner-enabled">Banner enabled on your store</label>
-          </div>
+          </div> -->
 
           <div class="mb-4">
-            <label for="bar-message">Message</label>
-            <textarea rows="3" class="form-control" id="bar-message" required>This website uses cookies to enhance your browsing experience.
-            </textarea>
+            <label for="bar-message">Content</label>
+            <textarea rows="10" class="form-control" id="bar-message" placeholder="Copy paste the product content here ( 1 per line )"></textarea>
             <div class="invalid-feedback">
               Please enter a message.
             </div>
           </div>
+          <p class="py-3"> or you can choose into import a file instead </p>
 
-          <div class="mb-4">
-            <label for="bar-privacy-link">Privacy Policy URL</label>
-            <input type="text" class="form-control" id="bar-privacy-link" required value="https://geeky-design.myshopify.com/policies/privacy-policy">
-            <div class="invalid-feedback">
-              Please enter your privacy policy URL
-            </div>
+          <div class="form-group">
+            <label for="exampleFormControlFile1">Product CSV</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
           </div>
 
-          <div class="mb-4">
-            <label for="bar-button-text">OK Button Text</label>
-            <input type="text" class="form-control" id="bar-button-text" required value="Got it!">
-            <div class="invalid-feedback">
-              Please enter OK button text
+          <div class="form-group row">
+            <div class="col-md-5">
+              <label for="inputState">Product type</label>
+              <select id="inputState" class="form-control">
+                <option selected>Choose...</option>
+                <option>Books</option>
+                <option>Groceries</option>
+                <option>Clothing</option>
+                <option>Others</option>
+              </select>
             </div>
           </div>
-
+        <!-- 
           <div class="mb-4">
             <label for="bar-privacy-link-text">Info Link Text</label>
             <input type="text" class="form-control" id="bar-privacy-link-text" required value="Learn More">
@@ -93,7 +81,7 @@
               Please enter info link text
             </div>
           </div>
-
+ -->
           <!-- <div class="row">
             <div class="col-md-5 mb-3">
               <label for="country">Country</label>
@@ -124,15 +112,16 @@
             </div>
           </div> -->
           <!-- <hr class="mb-4"> -->
-          <div class="custom-control custom-checkbox">
+          <hr class="mt-4">
+
+          <div class="custom-control custom-checkbox mb-5">
             <input type="checkbox" class="custom-control-input" id="eu-countries">
-            <label class="custom-control-label" for="eu-countries">Show banner just for EU countries</label>
+            <label class="custom-control-label" for="eu-countries">Import images</label>
           </div>
          <!--  <div class="custom-control custom-checkbox">
             <input type="checkbox" class="custom-control-input" id="save-info">
             <label class="custom-control-label" for="save-info">Save this information for next time</label>
           </div> -->
-          <hr class="mb-4">
 
          <!--  <h4 class="mb-3">Payment</h4>
 
@@ -187,16 +176,15 @@
 
        
 
-          <button class="btn btn-outline-primary btn-block" type="submit">Preview the cookie bar on store</button>
+          <button class="btn btn-primary btn-block" type="submit">Launch Import Wizard</button>
           <!-- <div class="btn btn-outline-primary btn-block">
             <%= link_to 'Preview the cookie bar on your store and come back 👍', create_sample_product_path, class: "btn" %>
           </div> -->
         </form>
       </div>
-      <div class="col-md-4 order-md-2">
+      <!-- <div class="col-md-4 order-md-2">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
           <span>Design Settings</span>
-          <!-- <span class="badge badge-secondary badge-pill">3</span> -->
         </h4>
         <p class="text-muted">Change the design of your banner</p>
 
@@ -226,28 +214,8 @@
             <h6 class="my-0">Button Border</h6>
             <input class="color-picker" id="color-button-border" value='#4FC3F7' />
           </li>
-          <!-- <li class="list-group-item d-flex justify-content-between bg-light">
-            <div class="text-success">
-              <h6 class="my-0">Promo code</h6>
-              <small>EXAMPLECODE</small>
-            </div>
-            <span class="text-success">-$5</span>
-          </li> -->
-         <!--  <li class="list-group-item d-flex justify-content-between">
-            <span>Total (USD)</span>
-            <strong>$20</strong>
-          </li> -->
         </ul>
-
-        <!-- <form class="card p-2">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Promo code">
-            <div class="input-group-append">
-              <button type="submit" class="btn btn-secondary">Redeem</button>
-            </div>
-          </div> 
-        </form> -->
-      </div>
+      </div> -->
     </div>
       
 
@@ -275,16 +243,3 @@
       </ul>
     </footer> -->
   </div>
-  <div class="preview-cookie-bar-holder">
-    <div class="preview-cookie-bar">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-10">
-            <div class="preview-bar-message"><span>Preview test message</span>&nbsp;<a href="#" class="preview-privacy-link">Learn More</a></div>
-          </div>
-          <div class="col-md-2">
-            <button class="btn btn-outline-primary btn-block preview-bar-button" type="submit">Got it!</button>
-          </div>
-        </div>
-      </div>
-    </div>
