@@ -60,7 +60,8 @@ class HomeController < AuthenticationController
 
   def process_images
     query = params['image-urls']
-    image_urls = query.split("\n")
+    image_urls = query.split("\n").compact.reject { |c| c.empty? }
+    byebug
     output = {}
     image_urls.each_with_index do |image_url, i|
       # ImageBackgroundRemover.process(image_url, "output_#{i}")
