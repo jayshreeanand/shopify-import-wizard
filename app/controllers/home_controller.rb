@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 # class HomeController < ApplicationController
+require './lib/book_fetcher.rb'
 
 class HomeController < AuthenticatedController
   layout 'pages' 
